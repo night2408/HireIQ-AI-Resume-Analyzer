@@ -1,0 +1,72 @@
+
+ {
+  "title": "Full Stack Developer",
+  "matchScore": 92,
+  "technicalQuestions": [
+    {
+      "question": "Explain the role of middleware in Express.js and how you implemented it for JWT authentication in your AI Interview Preparation Platform.",
+      "intention": "To assess the candidate's understanding of request-response lifecycles and security implementation in backend development.",
+      "answer": "Middleware functions have access to the request and response objects and can execute code, modify objects, or terminate the request. For JWT, I created a custom middleware that extracts the token from the header, verifies it using jsonwebtoken.verify(), and attaches the user payload to the request object or returns a 401 Unauthorized status if the token is invalid."
+    },
+    {
+      "question": "How do you handle schema design in MongoDB for a application with relational data, such as users having multiple interview sessions?",
+      "intention": "To evaluate database design skills and the ability to choose between embedding and referencing in NoSQL.",
+      "answer": "In MongoDB, I evaluate the growth of data. For interview sessions, I would likely use referencing (storing session IDs in the User document or a userID in the Session document) to avoid document size limits, especially if a user has many sessions. For small, static data, I might use embedding to improve read performance."
+    },
+    {
+      "question": "In your React projects, how do you manage state across multiple components, and when do you decide to use Redux over the Context API?",
+      "intention": "To test knowledge of frontend architecture and state management tradeoffs.",
+      "answer": "I use local state for component-specific data. For global state, I use Context API for simpler data like themes or user profiles. I switch to Redux for complex state logic, such as the interview analysis flow, where I need predictable state transitions, middleware like Redux Thunk for async actions, and better debugging tools."
+    }
+  ],
+  "behavioralQuestions": [
+    {
+      "question": "Tell me about a specific technical challenge you faced while integrating the Gemini AI API and how you resolved it.",
+      "intention": "To assess problem-solving skills and technical resilience.",
+      "answer": "The main challenge was handling long response times and occasional timeouts from the API. I implemented a loading state on the frontend for better UX and used asynchronous error handling with try-catch blocks on the backend to provide meaningful feedback to the user rather than letting the app crash."
+    }
+  ],
+  "skillGaps": [
+    {
+      "skill": "AWS Deployment",
+      "severity": "medium"
+    },
+    {
+      "skill": "System Design",
+      "severity": "medium"
+    },
+    {
+      "skill": "Advanced Docker/Containerization",
+      "severity": "low"
+    }
+  ],
+  "preparationPlan": [
+    {
+      "day": 1,
+      "focus": "System Design & Scalability",
+      "tasks": [
+        "Study Horizontal vs Vertical Scaling",
+        "Learn about Load Balancing and Caching strategies",
+        "Practice designing a scalable REST API architecture"
+      ]
+    },
+    {
+      "day": 2,
+      "focus": "Cloud Deployment & DevOps",
+      "tasks": [
+        "Explore AWS basics (EC2, S3, and RDS)",
+        "Deepen Docker knowledge by containerizing a multi-container MERN app",
+        "Learn basic CI/CD pipeline concepts using GitHub Actions"
+      ]
+    },
+    {
+      "day": 3,
+      "focus": "Advanced Coding & Mock Interviews",
+      "tasks": [
+        "Solve medium-level DSA problems on LeetCode focusing on Strings and Arrays",
+        "Review JWT refresh token implementation and security best practices",
+        "Conduct a mock interview focusing on explaining the AI Interview project architecture"
+      ]
+    }
+  ]
+}

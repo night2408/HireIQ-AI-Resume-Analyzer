@@ -1,0 +1,128 @@
+{
+  "_id": {
+    "$oid": "69c7adf2dda5a12a10ed256b"
+  },
+  "matchScore": 88,
+    "technicalQuestions": [
+    {
+      "question": "How did you manage real-time synchronization in your 'CodingTogether' project, and what challenges did you face with WebSockets?",
+      "intention": "To evaluate the candidate's understanding of real-time communication, concurrency, and backend messaging logic.",
+      "answer": "The project used Socket.io/WebSockets to create a bidirectional communication channel between the client and server. When a user types, an event is emitted to the server, which broadcasts the change to all other users in the same room. Challenges included handling race conditions where two users edit the same line simultaneously and managing connection/disconnection states to update the user list."
+    },
+    {
+      "question": "Explain how you would design a REST API for the 'HR Database Management System' to handle role-based access control (RBAC).",
+      "intention": "To assess knowledge of backend security, middleware, and database schema design.",
+      "answer": "I would implement middleware in Express.js that checks the user's JWT token for a 'role' property. Based on this role (e.g., Admin, Manager, Employee), the middleware would allow or deny access to specific routes. In the MySQL database, I would maintain a 'roles' table and a 'user_roles' mapping table to define permissions for each endpoint."
+    }
+  ],
+  "behavioralQuestions": [
+    {
+      "question": "Describe a time during your internship at Oizom Instruments when you had to debug a complex UI issue. How did you resolve it?",
+      "intention": "To gauge problem-solving skills and the ability to work under professional project constraints.",
+      "answer": "While building the live AQI dashboard, I encountered an issue where map markers wouldn't update correctly when filters were applied. I used React DevTools to trace the state flow and realized the API data was being cached improperly. I refactored the useEffect hooks to properly depend on the filter state and added a loading skeleton to improve user experience during data fetching."
+    }
+  ],
+  "skillGaps": [
+    {
+      "skill": "Docker & Containerization",
+      "severity": "medium"
+    },
+    {
+      "skill": "AWS Deployment (EC2/S3)",
+      "severity": "high"
+    },
+    {
+      "skill": "System Design Patterns",
+      "severity": "medium"
+    }
+  ],
+  "preparationPlan": [
+    {
+      "day": 1,
+      "focus": "Backend Deep Dive",
+      "tasks": [
+        "Review Express.js middleware patterns",
+        "Practice building custom error handling and validation using Joi/Zod"
+      ],
+      "_id": {
+        "$oid": "69c7adf2dda5a12a10ed256c"
+      }
+    },
+    {
+      "day": 2,
+      "focus": "Advanced React & State",
+      "tasks": [
+        "Study React Context API vs Redux for global state",
+        "Optimize rendering using useMemo and useCallback"
+      ],
+      "_id": {
+        "$oid": "69c7adf2dda5a12a10ed256d"
+      }
+    },
+    {
+      "day": 3,
+      "focus": "Database Optimization",
+      "tasks": [
+        "Practice MongoDB indexing and aggregation pipelines",
+        "Review SQL join types and normalization for the HR system project"
+      ],
+      "_id": {
+        "$oid": "69c7adf2dda5a12a10ed256e"
+      }
+    },
+    {
+      "day": 4,
+      "focus": "DevOps & Deployment",
+      "tasks": [
+        "Learn basic Docker commands: build, run, and compose",
+        "Deploy a simple MERN app to AWS or Render to understand the pipeline"
+      ],
+      "_id": {
+        "$oid": "69c7adf2dda5a12a10ed256f"
+      }
+    },
+    {
+      "day": 5,
+      "focus": "System Design Basics",
+      "tasks": [
+        "Study horizontal vs vertical scaling",
+        "Research Load Balancers and Caching strategies (Redis)"
+      ],
+      "_id": {
+        "$oid": "69c7adf2dda5a12a10ed2570"
+      }
+    },
+    {
+      "day": 6,
+      "focus": "AI Integration & APIs",
+      "tasks": [
+        "Review Gemini API documentation for advanced configurations",
+        "Practice secure storage of API keys using environment variables"
+      ],
+      "_id": {
+        "$oid": "69c7adf2dda5a12a10ed2571"
+      }
+    },
+    {
+      "day": 7,
+      "focus": "Mock Interview & DSA",
+      "tasks": [
+        "Solve 3-5 Medium LeetCode problems on Arrays and Strings",
+        "Refine project walkthroughs for NekoAI and CodingTogether"
+      ],
+      "_id": {
+        "$oid": "69c7adf2dda5a12a10ed2572"
+      }
+    }
+  ],
+  "user": {
+    "$oid": "69bea956e4f5bcdffc380246"
+  },
+  "createdAt": {
+    "$date": "2026-03-28T10:31:15.002Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-28T10:31:15.002Z"
+  },
+  "__v": 0
+}
